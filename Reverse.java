@@ -6,15 +6,22 @@ public class Reverse {
 	public static void main (String[] args){
 		
             String input = args[0];
-    
-            String reversed = new StringBuilder(input).reverse().toString();
-            System.out.println(reversed);
-    
-            int middleIndex = input.length() / 2 -1;
+
+            String s = "";
+            for (int i = input.length() - 1; i >= 0; i--){
+                s = s + input.charAt(i);
+            }
+            System.out.println(s);
+            // if (input.length() % 2 == 0)
+            // { int middleIndex = input.length() / 2;
+            // char middle = input.charAt(middleIndex);
+            // System.out.println("The middle character is " + middle);}
+            // else {
+            int middleIndex = (input.length() + 1) / 2;
             char middle = input.charAt(middleIndex);
             System.out.println("The middle character is " + middle);
-        }
-    }
+         
+    } }
     
     
     
