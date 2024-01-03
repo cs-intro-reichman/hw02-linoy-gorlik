@@ -6,30 +6,42 @@ public class Perfect {
 		
             int number = Integer.parseInt(args[0]);
 
-                int sum = 1; 
-
-                for (int i = 2; i <= number / 2; i++) {
-                    if (number % i == 0) {
-                        sum += i;
-                    }
-                }
-
-                if (sum == number) {
-                    System.out.printf("%d is a perfect number since %s%n", number, getDivisorsString(number));
-                } else {
-                    System.out.printf("%d is not a perfect number%n", number);
-                }
-            }
+            String a = number +" is a perfect number since " + number + " = 1";
         
-    public static String getDivisorsString(int num) {
-        StringBuilder divisors = new StringBuilder("= 1");
-        for (int i = 2; i <= num / 2; i++) {
-            if (num % i == 0) {
-                divisors.append(" + ").append(i);
+            int sum = 1; 
+             for ( int i = 2; i < number - 1; i++)
+
+             if (number%i == 0) {
+                a = a + " + " + i;
+                sum = sum + i;
             }
+if (sum == number) {
+    System.out.println(a);
         }
-        return divisors.toString();
-	} }
+    else {
+        System.out.println(number + " is not a perfect number");
+
+    } } }
+
+        //         for (int i = 1; i <= number; i++) {
+        //             if (number % i == 0) {
+        //                 sum += i;
+        //             }
+        //         }
+        //         String bla = "";  
+        //             for (int i = 1; i <= number; i++) {
+        //                 if (number % i == 0) {
+        //                     bla += " + " + i ; 
+        //                 }
+        //             }
+        //         System.out.print(sum);
+        //         if (sum == number) {
+        //             System.out.print(number+" is a perfect number since " + bla);
+        //         } else {
+        //             System.out.printf("%d is not a perfect number%n", number);
+        //         }
+        //     }
+        //  }
 
 
 		
