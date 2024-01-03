@@ -12,18 +12,60 @@ public class OneOfEachStats {
 		// Gets the two command-line arguments
 		int T = Integer.parseInt(args[0]);
 		int seed = Integer.parseInt(args[1]);
-		// Initailizes a random numbers generator with the given seed value
-        Random generator = new Random(seed);  
 		
-		//// In the previous version of this program, you used a statement like:
-		//// double rnd = Math.random();
-		//// Where "rnd" is the variable that stores the generated random value.
-		//// In this version of the program, replace this statement with:
-		//// double rnd = generator.nextDouble();
-		//// This statement will generate a random value in the range [0,1),
-		//// just like you had in the previous version, except that the 
-		//// randomization will be based on the given seed.
-		//// This is the only change that you have to do in the program.
+        Random generator = new Random(seed);  
+
+        double totalChildren = 0;
+        int familiesWith2Children = 0;
+        int familiesWith3Children = 0;
+        int familiesWith4OrMoreChildren = 0;
+
+        for (int i = 0; i < T; i++) {
+            
+				boolean boyBorn = false;
+				boolean girlBorn = false;
+				int childrenCount = 0;
+		
+				while (!(boyBorn && girlBorn)) {
+					// Generate a random value (0 or 1) to represent the gender
+					double gender = generator.nextDouble();; // 0 for girl, 1 for boy
+		
+					// Update the Boolean variables based on the gender
+					if (gender <0.5) {
+						girlBorn = true;
+					} else {
+						boyBorn = true;
+					}
+		
+					// Print the gender (g for girl, b for boy)
+					// System.out.print((gender == 0) ? "g " : "b ");
+		
+					// Increment the count of children
+					childrenCount++;
+
+                    totalChildren++;
+				}
+
+                if(childrenCount==2){
+                    familiesWith2Children++;
+                }
+                if(childrenCount==3){
+                    familiesWith3Children++;
+                }
+                if(childrenCount>3){
+                    familiesWith4OrMoreChildren++;
+                }
+
+            }
+                double x = totalChildren /T;
+                System.out.println("Average: " + x + " children to get at least one of each gender.");
+                System.out.println("Number of families with 2 children: " + familiesWith2Children);
+                System.out.println("Number of families with 3 children: " + familiesWith3Children);
+                System.out.println("Number of families with 4 or more children: " + familiesWith4OrMoreChildren);
+				// System.out.println(); // Move to the next line after printing the children's genders
+				// System.out.println("You made it... and you now have " + childrenCount + " children.");
+			
+		}
 		    
 	}
-}
+
