@@ -62,10 +62,22 @@ public class OneOfEachStats {
                 System.out.println("Number of families with 2 children: " + familiesWith2Children);
                 System.out.println("Number of families with 3 children: " + familiesWith3Children);
                 System.out.println("Number of families with 4 or more children: " + familiesWith4OrMoreChildren);
-				// System.out.println(); // Move to the next line after printing the children's genders
-				// System.out.println("You made it... and you now have " + childrenCount + " children.");
-			
+				if(familiesWith2Children >familiesWith3Children && familiesWith2Children >familiesWith4OrMoreChildren )
+				{
+					System.out.println("The most common number of children is 2");
+				}
+		
+			if(familiesWith3Children >familiesWith2Children && familiesWith3Children >familiesWith4OrMoreChildren )
+				{
+					System.out.println("The most common number of children is 3");
+				}
+				if(familiesWith4OrMoreChildren >familiesWith2Children &&  familiesWith4OrMoreChildren >familiesWith2Children )
+				{
+					System.out.println("The most common number of children is 4");
+				}
 		}
+
+
 		    
 	}
 
