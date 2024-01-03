@@ -9,7 +9,7 @@ import java.util.Random;
  */
 public class OneOfEachStats {
 	public static void main (String[] args) {
-		// Gets the two command-line arguments
+		
 		int T = Integer.parseInt(args[0]);
 		int seed = Integer.parseInt(args[1]);
 		
@@ -27,20 +27,15 @@ public class OneOfEachStats {
 				int childrenCount = 0;
 		
 				while (!(boyBorn && girlBorn)) {
-					// Generate a random value (0 or 1) to represent the gender
-					double gender = generator.nextDouble();; // 0 for girl, 1 for boy
+				
+					double gender = generator.nextDouble();; 
 		
-					// Update the Boolean variables based on the gender
 					if (gender <0.5) {
 						girlBorn = true;
 					} else {
 						boyBorn = true;
 					}
 		
-					// Print the gender (g for girl, b for boy)
-					// System.out.print((gender == 0) ? "g " : "b ");
-		
-					// Increment the count of children
 					childrenCount++;
 
                     totalChildren++;

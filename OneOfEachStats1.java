@@ -24,20 +24,17 @@ public class OneOfEachStats1 {
 				int childrenCount = 0;
 		
 				while (!(boyBorn && girlBorn)) {
-					// Generate a random value (0 or 1) to represent the gender
-					int gender = (int) (Math.random() * 2); // 0 for girl, 1 for boy
+				
+					int gender = (int) (Math.random() * 2); 
 		
-					// Update the Boolean variables based on the gender
+					
 					if (gender == 0) {
 						girlBorn = true;
 					} else {
 						boyBorn = true;
 					}
 		
-					// Print the gender (g for girl, b for boy)
-					// System.out.print((gender == 0) ? "g " : "b ");
-		
-					// Increment the count of children
+					
 					childrenCount++;
 
                     totalChildren++;
@@ -59,8 +56,7 @@ public class OneOfEachStats1 {
                 System.out.println("Number of families with 2 children: " + familiesWith2Children);
                 System.out.println("Number of families with 3 children: " + familiesWith3Children);
                 System.out.println("Number of families with 4 or more children: " + familiesWith4OrMoreChildren);
-				// System.out.println(); // Move to the next line after printing the children's genders
-				// System.out.println("You made it... and you now have " + childrenCount + " children.");
+
 			
 		}
 

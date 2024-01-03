@@ -23,26 +23,4 @@ if (sum == number) {
 
     } } }
 
-        //         for (int i = 1; i <= number; i++) {
-        //             if (number % i == 0) {
-        //                 sum += i;
-        //             }
-        //         }
-        //         String bla = "";  
-        //             for (int i = 1; i <= number; i++) {
-        //                 if (number % i == 0) {
-        //                     bla += " + " + i ; 
-        //                 }
-        //             }
-        //         System.out.print(sum);
-        //         if (sum == number) {
-        //             System.out.print(number+" is a perfect number since " + bla);
-        //         } else {
-        //             System.out.printf("%d is not a perfect number%n", number);
-        //         }
-        //     }
-        //  }
-
-
-		
-
+        

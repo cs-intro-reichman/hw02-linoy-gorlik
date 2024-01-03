@@ -16,21 +16,18 @@ public class InOrderTest {
 
         while (count < 10) {
 
-            // Create a ByteArrayOutputStream to capture the output
             ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
             PrintStream printStream = new PrintStream(outputStream);
 
-            // Redirect the standard output to the ByteArrayOutputStream
+         
             PrintStream originalOut = System.out;
             System.setOut(printStream);
-            InOrder.main(null); // Run the InOrder program
+            InOrder.main(null); 
 
-            // Reset the standard output
             System.setOut(originalOut);
 
-            // Get the captured output as a string
             String capturedOutput = outputStream.toString();
-            // Check if the generated sequence is non-decreasing
+           
             if (!isNonDecreasing(capturedOutput)) {
                 System.out.println("Test failed: Sequence is not non-decreasing");
                 return;
