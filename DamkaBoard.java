@@ -11,11 +11,14 @@ public class DamkaBoard {
            
             if (i % 2 != 0) {
                 System.out.print(" ");
-            }
+                for (int j = 0; j < n; j++) {
+                    System.out.print("* ");
+                }
+            }else{
+                for (int j = 0; j < n; j++) {
+                            System.out.print("* ");
+                        }            }
 
-            for (int j = 0; j < n; j++) {
-                System.out.print(" *");
-            }
             System.out.println();
         } 
     }
