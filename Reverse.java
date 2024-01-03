@@ -10,7 +10,7 @@ public class Reverse {
             String reversed = new StringBuilder(input).reverse().toString();
             System.out.println(reversed);
     
-            int middleIndex = input.length() / 2;
+            int middleIndex = input.length() / 2 -1;
             char middle = input.charAt(middleIndex);
             System.out.println("The middle character is " + middle);
         }
